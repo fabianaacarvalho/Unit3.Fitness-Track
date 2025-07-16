@@ -26,7 +26,7 @@ export default function useQuery(resource, tag) {
   useEffect(() => {
     if (tag) provideTag(tag, query);
     query();
-  }, []);
+  }, [resource, tag]);
 
   return { data, loading, error };
 }
