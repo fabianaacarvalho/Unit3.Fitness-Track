@@ -32,7 +32,7 @@ export default function ActivityDetailsPage() {
       <p>Description: {activity.description}</p>
       {token && (
         <button onClick={() => deleteActivity()}>
-          {loading ? "Deleting" : error ? error : "Delete"}
+          {deleteLoading ? "Deleting" : deleteError ? deleteError : "Delete"}
         </button>
       )}
     </>
